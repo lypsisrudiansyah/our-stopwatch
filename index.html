@@ -1,0 +1,342 @@
+<!-- Nama : Rudiansyah -->
+<!-- NIM : 3201916020 -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="src/bootstrap/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="src/style.css">
+    <script type="text/javascript" src="src/jquery-3.6.0.min.js"></script>
+    <style>
+        /* .as-center {
+            align-self: center;
+        }
+        .fs-1 {
+            font-size: 46px;
+            font-weight: bold;
+        }
+        .fs-2 {
+            font-size: 25px;
+        }
+        .f-blue {
+            color: #0073ee
+        }
+        .f-blue-2 {
+            color: #2575ca
+        }
+        .hr2 {
+            border: 0;
+            border-top: 1px dashed #CCC;
+            margin-top: 0px !important;
+            margin-bottom: 0px !important;
+        }
+        .mh-icon {
+            max-height: 55px;
+        } */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col text-center as-center p-3">
+            <img src="src/images/running.png" alt="">
+            </div>
+            <div class="col text-center as-center p-3 fs-1 f-blue time" id="display">
+            </div>
+            <div class="col text-center as-center p-3 fs-2 f-blue-2" id="time">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col text-right ">
+                <button type="button" class="btn btn-primary" id="playButton">Mulai</button>
+            </div>
+            <div class="col text-center">
+                <button type="button" class="btn btn-secondary" id="resetButton">Mulai Ulang</button>
+            </div>
+            <div class="col">
+                <button type="button" class="btn btn-danger" id="pauseButton">Pause</button>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col text-center as-center">
+                <img src="src/images/p1.png" alt="" class="mh-icon">
+            </div>
+            <div class="col text-center as-center fs-2">
+                Rudiansyah
+            </div>
+            <div class="col text-center as-center p-2 fs-2 f-blue" id="t_p1">
+                00:00:00
+            </div>
+            <div class="col text-center as-center">
+                <button type="button" class="btn btn-success" id="btn_1">Selesai</button>
+            </div>
+        </div>
+        <hr class="hr2">
+        <div class="row">
+            <div class="col text-center as-center">
+                <img src="src/images/p3.png" alt="" class="mh-icon">
+            </div>
+            <div class="col text-center as-center fs-2">
+                Hamzah
+            </div>
+            <div class="col text-center as-center p-2 fs-2 f-blue" id="t_p2">
+                00:00:00
+            </div>
+            <div class="col text-center as-center">
+                <button type="button" class="btn btn-success" id="btn_2">Selesai</button>
+            </div>
+        </div>
+        <hr class="hr2">
+        <div class="row">
+            <div class="col text-center as-center">
+                <img src="src/images/p4.png" alt="" class="mh-icon">
+            </div>
+            <div class="col text-center as-center fs-2">
+                Haiwah
+            </div>
+            <div class="col text-center as-center p-2 fs-2 f-blue" id="t_p3">
+                00:00:00
+            </div>
+            <div class="col text-center as-center">
+                <button type="button" class="btn btn-success" id="btn_3">Selesai</button>
+            </div>
+        </div>
+        <hr class="hr2">
+        <div class="row">
+            <div class="col text-center as-center">
+                <img src="src/images/p5.png" alt="" class="mh-icon">
+            </div>
+            <div class="col text-center as-center fs-2">
+                Zainal
+            </div>
+            <div class="col text-center as-center p-2 fs-2 f-blue" id="t_p4">
+                00:00:00
+            </div>
+            <div class="col text-center as-center">
+                <button type="button" class="btn btn-success" id="btn_4">Selesai</button>
+            </div>
+        </div>
+        <hr class="hr2">
+        <div class="row">
+            <div class="col text-center as-center">
+                <img src="src/images/p6.png" alt="" class="mh-icon">
+            </div>
+            <div class="col text-center as-center fs-2">
+                Joko
+            </div>
+            <div class="col text-center as-center p-2 fs-2 f-blue" id="t_p5">
+                00:00:00
+            </div>
+            <div class="col text-center as-center">
+                <button type="button" class="btn btn-success" id="btn_5">Selesai</button>
+            </div>
+        </div>
+        <hr class="hr2">
+        <div class="row">
+            <div class="col text-center as-center">
+                <img src="src/images/p7.png" alt="" class="mh-icon">
+            </div>
+            <div class="col text-center as-center fs-2">
+                Doni
+            </div>
+            <div class="col text-center as-center p-2 fs-2 f-blue" id="t_p6">
+                00:00:00
+            </div>
+            <div class="col text-center as-center">
+                <button type="button" class="btn btn-success" id="btn_6">Selesai</button>
+            </div>
+        </div>
+        <hr class="hr2">
+        <div class="row">
+            <div class="col text-center as-center">
+                <img src="src/images/p8.png" alt="" class="mh-icon">
+            </div>
+            <div class="col text-center as-center fs-2">
+                Bolt
+            </div>
+            <div class="col text-center as-center p-2 fs-2 f-blue" id="t_p7">
+                00:00:00
+            </div>
+            <div class="col text-center as-center">
+                <button type="button" class="btn btn-success" id="btn_7">Selesai</button>
+            </div>
+        </div>
+        <hr class="hr2">
+        <div class="row">
+            <div class="col text-center as-center">
+                <img src="src/images/p2.png" alt="" class="mh-icon">
+            </div>
+            <div class="col text-center as-center fs-2">
+                Denny
+            </div>
+            <div class="col text-center as-center p-2 fs-2 f-blue" id="t_p8">
+                00:00:00
+            </div>
+            <div class="col text-center as-center">
+                <button type="button" class="btn btn-success" id="btn_8">Selesai</button>
+            </div>
+        </div>
+      </div>
+</body>
+<script>
+    (function () {
+        function checkTime(i) {
+            return (i < 10) ? "0" + i : i;
+        }
+
+        function startTime() {
+            var today = new Date(),
+                h = checkTime(today.getHours()),
+                m = checkTime(today.getMinutes()),
+                s = checkTime(today.getSeconds());
+            document.getElementById('time').innerHTML = h + ":" + m + ":" + s;
+            t = setTimeout(function () {
+                startTime()
+            }, 500);
+        }
+        startTime();
+    })();
+
+    function timeToString(time) {
+        let diffInHrs = time / 3600000;
+        let hh = Math.floor(diffInHrs);
+
+        let diffInMin = (diffInHrs - hh) * 60;
+        let mm = Math.floor(diffInMin);
+
+        let diffInSec = (diffInMin - mm) * 60;
+        let ss = Math.floor(diffInSec);
+
+        let diffInMs = (diffInSec - ss) * 100;
+        let ms = Math.floor(diffInMs);
+
+        let formattedMM = mm.toString().padStart(2, "0");
+        let formattedSS = ss.toString().padStart(2, "0");
+        let formattedMS = ms.toString().padStart(2, "0");
+
+        return `${formattedMM}:${formattedSS}:${formattedMS}`;
+    }
+
+    // Declare variables to use in our functions below
+    let startTime;
+    let elapsedTime = 0;
+    let timerInterval;
+    print(timeToString(0));
+
+    // Create function to modify innerHTML
+    function print(txt) {
+        document.getElementById("display").innerHTML = txt;
+    }
+
+    // Create "start", "pause" and "reset" functions
+
+    function start() {
+        // if (first == true) {
+        //     elapsedTime = 0;
+        // }
+        // first = false;
+        startTime = Date.now() - elapsedTime;
+        timerInterval = setInterval(function printTime() {
+            elapsedTime = Date.now() - startTime;
+            print(timeToString(elapsedTime));
+        }, 10);
+        showButton("PAUSE");
+    }
+
+    function pause() {
+        clearInterval(timerInterval);
+        console.log(timeToString(elapsedTime));
+        showButton("PLAY");
+    }
+
+    function reset() {
+        clearInterval(timerInterval);
+        print("00:00:00");
+        elapsedTime = 0;
+        document.getElementById("t_p1").innerHTML = timeToString(0);
+        document.getElementById("t_p2").innerHTML = timeToString(0);
+        document.getElementById("t_p3").innerHTML = timeToString(0);
+        document.getElementById("t_p4").innerHTML = timeToString(0);
+        document.getElementById("t_p5").innerHTML = timeToString(0);
+        document.getElementById("t_p6").innerHTML = timeToString(0);
+        document.getElementById("t_p7").innerHTML = timeToString(0);
+        document.getElementById("t_p8").innerHTML = timeToString(0);
+        showButton("PLAY");
+    }
+
+    // Create function to display buttons
+    function showButton(buttonKey) {
+        const buttonToShow = buttonKey === "PLAY" ? playButton : pauseButton;
+        const buttonToHide = buttonKey === "PLAY" ? pauseButton : playButton;
+        buttonToShow.style.display = "inline";
+        buttonToHide.style.display = "none";
+    }
+
+    // Create event listeners
+    let playButton = document.getElementById("playButton");
+    let pauseButton = document.getElementById("pauseButton");
+    let resetButton = document.getElementById("resetButton");
+
+    playButton.addEventListener("click", start);
+    pauseButton.addEventListener("click", pause);
+    resetButton.addEventListener("click", reset);
+
+    $('#btn_1').click(() => {
+        done1();
+    });
+    function done1() {
+        document.getElementById("t_p1").innerHTML = timeToString(elapsedTime);
+    }
+    
+    $('#btn_2').click(() => {
+        done2();
+    });
+    function done2() {
+        document.getElementById("t_p2").innerHTML = timeToString(elapsedTime);
+    }
+
+    $('#btn_3').click(() => {
+        done3();
+    });
+    function done3() {
+        document.getElementById("t_p3").innerHTML = timeToString(elapsedTime);
+    }
+
+    $('#btn_3').click(() => {
+        done3();
+    });
+    function done3() {
+        document.getElementById("t_p3").innerHTML = timeToString(elapsedTime);
+    }
+    $('#btn_4').click(() => {
+        done4();
+    });
+    function done4() {
+        document.getElementById("t_p4").innerHTML = timeToString(elapsedTime);
+    }
+    $('#btn_5').click(() => {
+        done5();
+    });
+    function done5() {
+        document.getElementById("t_p5").innerHTML = timeToString(elapsedTime);
+    }
+    $('#btn_6').click(() => {
+        done6();
+    });
+    function done6() {
+        document.getElementById("t_p6").innerHTML = timeToString(elapsedTime);
+    }
+    $('#btn_7').click(() => {
+        done7();
+    });
+    function done7() {
+        document.getElementById("t_p7").innerHTML = timeToString(elapsedTime);
+    }
+    $('#btn_8').click(() => {
+        done8();
+    });
+    function done8() {
+        document.getElementById("t_p8").innerHTML = timeToString(elapsedTime);
+    }
+</script>
+</html>
